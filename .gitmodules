@@ -1,0 +1,9 @@
+[submodule "Software/testAppEEROSEVT2"]
+	path = Software/testAppEEROSEVT2
+	url = https://github.com/MarcelGehrig2/testAppEEROSEVT2.git/
+[submodule "Software/eeros-framework"]
+	path = Software/eeros-framework
+	url = https://github.com/MarcelGehrig/eeros-framework
+[submodule "Software/testAppVt2"]
+	path = Software/testAppVt2
+	url = https://github.com/MarcelGehrig2/testAppVt2.git

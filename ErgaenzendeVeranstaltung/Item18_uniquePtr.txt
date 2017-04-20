@@ -1,0 +1,19 @@
+
+
+std::auto_ptr veraltet für c++98. Neu verwende std::unique_ptr
+
+Meist verwendete Smart Pointer.
+
+Gleich gross wie Raw Pointer, und verhalten sich in den meisten Fällen gleich.
+
+Exclusive ownership
+
+std::move transferiert ownership zum Ziel-Pointer. Der Quell-Pointer wird NULL.
+
+Kopieren ist nicht erlaubt -> move-only type
+
+Wird der Pointer zerstört, wird auch das dazugehörige Objekt zerstört.
+
+
+
+
