@@ -1,0 +1,38 @@
+
+copy constructor
+normal constructor
+
+int x(0);           //() = parantheses
+int y = 0;
+int z{ 0 };         //{} = braces
+int z = { 0 };      //Entspricht  'int z{ 0 };'
+
+
+
+
+
+class Widget {
+...
+private:
+int x{ 0 };     //fine
+int y = 0;      //fine
+int z(0);       //error
+};
+
+std::atomic<int> ai1{ 0 };  // fine
+std::atomic<int> ai2(0);    // fine
+std::atomic<int> ai3 = 0;   // error! Copy constructor is used on uncopyable object
+
+{} are called "uniform"
+
+
+
+
+Braced initialization checks 'tightly' for correct type. It prohibits 'narrowing conversion'. That means, only types which are guaranteed to match with the constructor are allowed:
+double x=5;
+dobule y=10;
+int sum1{ x + y };      // error! double may not be expressible as int.
+// Note: sim1 is an interger, not a custoom class
+
+
+
