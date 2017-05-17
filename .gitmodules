@@ -10,3 +10,6 @@
 [submodule "Bericht"]
 	path = Bericht
 	url = https://github.com/MarcelGehrig2/berichtVt2.git
+[submodule "Software/simpleROSNodeVt2"]
+	path = Software/simpleROSNodeVt2
+	url = https://github.com/MarcelGehrig2/simpleROSNodeVt2.git
