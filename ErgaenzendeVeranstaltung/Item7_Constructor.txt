@@ -1,38 +1,86 @@
+// ITEM 7       Distinguish between () and {} when creating objects.
+// ////////////////////////////////////////////////////////////////////////////
 
-copy constructor
-normal constructor
+// * { } = braced initialization
 
-int x(0);           //() = parantheses
-int y = 0;
-int z{ 0 };         //{} = braces
-int z = { 0 };      //Entspricht  'int z{ 0 };'
-
-
+// summary -------------------------------------------------------------------
+// * {} can be used for an std::initializer_list
+// * {} can be used for uniform initialization
+// * {} can be used to preven narrowing conversions
+// * {} can be used to prevent 'most vexing parse' problem
 
 
+// container initialization (initializer_list) --------------------------------
+std::vector<int> v{ 1, 3, 5 };  // v's initial content is 1, 3, 5
+int x[] = {1,2,3};              // x has type int[3] and holds 1,2,3
+int y[5] = {1,2,3};             // y has type int[5] and holds 1,2,3,0,0
+int z[3] = {0};                 // z has type int[3] and holds all zeroes
 
+Widget w2 = w1;     // copy constructor!
+w1 = w2;            // calls copy operator=
+
+
+// initialization of non-static data members ----------------------------------
 class Widget {
 ...
 private:
-int x{ 0 };     //fine
-int y = 0;      //fine
-int z(0);       //error
+int x{ 0 };     // fine ( {} = braces = )
+int x = { 0 }   // same as 'int x{ 0 }'
+int y = 0;      // fine
+int z( 0 );     // ERROR ( () = prantheses )
 };
 
-std::atomic<int> ai1{ 0 };  // fine
-std::atomic<int> ai2(0);    // fine
-std::atomic<int> ai3 = 0;   // error! Copy constructor is used on uncopyable object
+// initialization of uncopyable objects ---------------------------------------
+std::atomic<int> ai1{ 0 };      // fine (uniform initialization)
+std::atomic<int> ai2( 0 );      // fine ("old" initialization)
+std::atomic<int> ai3 = 0;       // ERROR! Copy constructor can not be used for uncopyable object
+std::vector<int> v1(10, 20);    // NON-std::initializer_list constructor: create 10-element std::vector, all elements have value of 20
+std::vector<int> v2{10, 20};    // use std::initializer_list constructor: create  2-element std::vector, element values are 10 and 20
 
-{} are called "uniform"
+// {} can be used to initialize 'non-static data members' and 'uncopyable objects'  -->  uniform initialization
 
 
-
-
-Braced initialization checks 'tightly' for correct type. It prohibits 'narrowing conversion'. That means, only types which are guaranteed to match with the constructor are allowed:
-double x=5;
-dobule y=10;
+// tight check of 'narrowing conversions' -------------------------------------
+//  braced initialization checks 'tightly' for correct type. It prohibits 'narrowing conversion'. That means, only types which are guaranteed to match with the constructor are allowed:
+double x = 5;
+double y = 10;
 int sum1{ x + y };      // error! double may not be expressible as int.
-// Note: sim1 is an interger, not a custoom class
+                        //  narrowing conversions (conversion to "less precise type") are prohibited inside braces
+int sum2(x + y);        // no check for 'narrowing conversions'
+int sum3 = x + y;       // no check for 'narrowing conversions'
 
 
+// prevent 'most vexing parse' problem ----------------------------------------
+//  'most vexing parse' = everything which can be parsed as a declaration is parsed as a declaration
+Widget w1(10);          // Widget constructor with argument 10
+Widget w2();            // most vexing parse! declares a function named w2 that returns a Widget!
+                        //  No constructor is called!
+Widget w3{};            // calls Widget constructor with no arguments
 
+
+// use 'std::initializer_list' as prameter ------------------------------------
+// in constructor calls, parentheses and braces have the same meaning as long as std::initializer_list parameters are not involved:
+class Widget {
+public:
+    Widget();                    // default constructor
+    Widget(int i, bool b);       // constructo not declaring
+    Widget(int i, double d);     // std::initializer_list parameters
+    Widget(std::initializer_list<long double> il);
+};
+Widget w1(10, true);    // calls second constructor
+Widget w2(10, 5.0);     // calls third constructor
+Widget w3{10, true};    // uses braces, calls std::initializer_list constructor (10 and true convert to long double)
+Widget w4(w2);          // uses prantheses, calls copy constructor
+Widget w5{w2};          // uses braces, calls std::initializer_list constructor (w4 converts to float, and float converts to long double)
+// if the initializer_list would do a 'narrowing conversion' --> compiler error
+// if there is no conversion possible at all with the initializer_list --> normal overload constructor are used
+// if ther is no suitable normal overload constructor --> compiler error as usual
+Widget w6;              // calls default constructor
+Widget w7{};            // also calls default constructor
+Widget w8();            // WARNING. Most vexing parse! declares a function!
+Widget w9({});          // calls std::initializer_list constructor with empty list
+Widget w10{{}};         // calls std::initializer_list constructor with empty list
+
+
+// good design pratices -------------------------------------------------------
+// * do not build a class where the use of {} instead of () changes its behavior (std::vector is a bad example)

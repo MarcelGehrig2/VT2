@@ -1,0 +1,48 @@
+2017-06-16 15:26:37    I:  EEROS started
+2017-06-16 15:26:37    T:  ROS node initialized.
+2017-06-16 15:26:37  S W:  safety system verified: 5 safety levels are present
+2017-06-16 15:26:37    I:  ROS_INFO 
+Itterations: 1 Duration per itteration: 7 usec
+2017-06-16 15:26:37    I:  ROS_INFO 
+Itterations: 1 Duration per itteration: 4 usec
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+2017-06-16 15:26:37    I:  ROS_INFO 
+Itterations: 10 Duration per itteration: 3 usec
+2017-06-16 15:26:37    I:  ROS_INFO 
+After 0sec sleep. Duration for one itteration: 3 usec
+2017-06-16 15:26:37    I:  ROS_INFO 
+After 0sec sleep. Duration for one itteration: 4 usec
+2017-06-16 15:26:37    I:  ROS_INFO 
+After 0sec sleep. Duration for one itteration: 3 usec
+2017-06-16 15:26:38    I:  ROS_INFO 
+After 1sec sleep. Duration for one itteration: 30 usec
+2017-06-16 15:26:39    I:  ROS_INFO 
+After 1sec sleep. Duration for one itteration: 32 usec
+2017-06-16 15:26:40    I:  ROS_INFO 
+After 1sec sleep. Duration for one itteration: 31 usec
+2017-06-16 15:26:41    I:  ROS_INFO 
+After 1sec sleep. Duration for one itteration: 32 usec
+2017-06-16 15:26:42    I:  ROS_INFO 
+After 1sec sleep. Duration for one itteration: 29 usec
+
+2017-06-16 15:26:43    I:  executor.run()
+2017-06-16 15:26:43  E T:  starting executor with base period 0.5 sec and priority 49
+2017-06-16 15:26:43  E T:  assigning priorities
+2017-06-16 15:26:43  E T:  setting 'safety system' as main task
+2017-06-16 15:26:43  E T:  creating harmonic realtime task 'control system' with period 0.5 sec (k = 1) and priority 48 based on 'executor'
+2017-06-16 15:26:43  E T:  creating harmonic realtime task 'periodic log' with period 0.5 sec (k = 1) and priority 47 based on 'executor'
+2017-06-16 15:26:43  A T:  starting realtime thread 5301:5324 with priority 47
+2017-06-16 15:26:43  A T:  starting realtime thread 5301:5323 with priority 48
+2017-06-16 15:26:44  E T:  starting periodic execution
+nan
+2017-06-16 15:26:44  S I:  triggering event: 'start initializing' in level 'initializing'
+2017-06-16 15:26:44  S I:  new safety level: 'initialized'
+
