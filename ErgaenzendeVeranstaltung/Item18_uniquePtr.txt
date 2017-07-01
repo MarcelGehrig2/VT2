@@ -4,12 +4,12 @@
 // summary -------------------------------------------------------------------
 // * expresses unique ownership. use std::shared_ptr if multiple owner are possible
 // * defined in header <memory>
-// * std::unique_ptr are the same size as raw pointer and for most operations (including dereferencing), they execute exactly the same instructions --> they use little ressources like raw pointer
+// * std::unique_ptr are the same size as raw pointer and for most operations (including dereferencing), they execute exactly the same instructions --> they use little resources like raw pointer
 // * std::unique_ptr embodies exclusive ownership semantics. Moving a std::unique_ptr transfers ownership from the source pointer to the destination pointer.
-// * copying a std::unique_ptr isn’t allowed, because it would not be unique anymore
-// * upon destruction, a non-null std::unique_ptr destroys its resource (oject which it points to)
+// * copying a std::unique_ptr is not allowed, because it would not be unique anymore
+// * upon destruction, a non-null std::unique_ptr destroys its resource (object which it points to)
 // * a custom deleter can be used to destroy its resource
-// * the size of the std::unique_ptr grows if a custom deleter is used. If a lamda function wit no captures is used as custem deleter the size of the std::unique_ptr does not grow
+// * the size of the std::unique_ptr grows if a custom deleter is used. If a lamda function with no captures is used as custom deleter the size of the std::unique_ptr does not grow
 // * 'std::make_unique' can be used to create an unique_ptr and an object at the same time
 // * std::unique_ptr come in two basic forms:
 //		- individual objects:	std::unique_ptr<T>
@@ -18,11 +18,12 @@
 
 
 // custom deleter -------------------------------------------------------------
+// * the standard deleter uses 'delete' on the object
 // * a custom deleter can be used with an unique_ptr
-// * a lamda function or a function object (object with overloader operator()) can be used as deleter
+// * a lamda function or a function object (object with overloaded operator()) can be used as deleter
 // * the lambda function or operator() is executed when the unique_ptr is destroyed
 // * the deleter should delete the object, which the unique_ptr points to
-// * a custom deleter an be used to make a log entry before deleting an object
+// * a custom deleter can be used to make a log entry before deleting an object
 
 // definition of deleter:
 auto customDeleter = [](A* object) {
@@ -69,7 +70,7 @@ public:
 
 
 // ||| custom deleter |||
-// customDeleter is a lambda-fct. Could also be an object -> 'operator()' is called, wenn unique_ptr is destroyed
+// customDeleter is a lambda-fct. Could also be an object -> 'operator()' is called, when unique_ptr is destroyed
 auto customDeleter = [](A* object) {
 	std::cout << "Object '" << object->name << "' deleted with custom deleter" << std::endl;
 	delete object;
@@ -80,7 +81,7 @@ auto customDeleter = [](A* object) {
 // auto AFactory(std::string name)	// c++14 only
 std::unique_ptr<A, decltype(customDeleter)> AFactory(std::string name)
 {
-	std::cout << "AFactory is  beeing used" << std::endl;
+	std::cout << "AFactory is  being used" << std::endl;
 	auto ptr = new A( name );
 	std::unique_ptr<A, decltype(customDeleter)> ptrWithDeleter(ptr, customDeleter);
     return ptrWithDeleter;
@@ -113,7 +114,7 @@ int main()
 // Object A with name 'make_unique' created.
 // Object A with name 'make_shared' created.
 // make_unique has been created with std::make_unique
-// AFactory is  beeing used
+// AFactory is  being used
 // Object A with name 'AFactory' created.
 // Object A with name 'newA' created.
 // Object A with name 'newA.2' created.

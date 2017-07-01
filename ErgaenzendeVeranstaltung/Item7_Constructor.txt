@@ -6,7 +6,7 @@
 // summary -------------------------------------------------------------------
 // * {} can be used for an std::initializer_list
 // * {} can be used for uniform initialization
-// * {} can be used to preven narrowing conversions
+// * {} can be used to prevent narrowing conversions
 // * {} can be used to prevent 'most vexing parse' problem
 
 
@@ -27,7 +27,7 @@ private:
 int x{ 0 };     // fine ( {} = braces = )
 int x = { 0 }   // same as 'int x{ 0 }'
 int y = 0;      // fine
-int z( 0 );     // ERROR ( () = prantheses )
+int z( 0 );     // ERROR ( () = parentheses )
 };
 
 // initialization of uncopyable objects ---------------------------------------
@@ -58,23 +58,23 @@ Widget w2();            // most vexing parse! declares a function named w2 that 
 Widget w3{};            // calls Widget constructor with no arguments
 
 
-// use 'std::initializer_list' as prameter ------------------------------------
+// use 'std::initializer_list' as parameter ------------------------------------
 // in constructor calls, parentheses and braces have the same meaning as long as std::initializer_list parameters are not involved:
 class Widget {
 public:
     Widget();                    // default constructor
-    Widget(int i, bool b);       // constructo not declaring
+    Widget(int i, bool b);       // constructor not declaring
     Widget(int i, double d);     // std::initializer_list parameters
     Widget(std::initializer_list<long double> il);
 };
 Widget w1(10, true);    // calls second constructor
 Widget w2(10, 5.0);     // calls third constructor
 Widget w3{10, true};    // uses braces, calls std::initializer_list constructor (10 and true convert to long double)
-Widget w4(w2);          // uses prantheses, calls copy constructor
+Widget w4(w2);          // uses parentheses, calls copy constructor
 Widget w5{w2};          // uses braces, calls std::initializer_list constructor (w4 converts to float, and float converts to long double)
 // if the initializer_list would do a 'narrowing conversion' --> compiler error
 // if there is no conversion possible at all with the initializer_list --> normal overload constructor are used
-// if ther is no suitable normal overload constructor --> compiler error as usual
+// if there is no suitable normal overload constructor --> compiler error as usual
 Widget w6;              // calls default constructor
 Widget w7{};            // also calls default constructor
 Widget w8();            // WARNING. Most vexing parse! declares a function!
@@ -82,5 +82,5 @@ Widget w9({});          // calls std::initializer_list constructor with empty li
 Widget w10{{}};         // calls std::initializer_list constructor with empty list
 
 
-// good design pratices -------------------------------------------------------
-// * do not build a class where the use of {} instead of () changes its behavior (std::vector is a bad example)
+// good design practices -------------------------------------------------------
+// * do not build a class where the use of {} instead of () changes its behaviour (std::vector is a bad example)

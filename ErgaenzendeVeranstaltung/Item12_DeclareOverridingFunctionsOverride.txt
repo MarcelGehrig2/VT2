@@ -3,8 +3,8 @@
 
 // summary -------------------------------------------------------------------
 // * override != overload
-// * many mistakes with overriding are syntactically valid, but have a different behavior than probably intended
-// * declaring a function as 'override' prevents it from accidently beeing only an overload
+// * many mistakes with overriding are syntactically valid but have a different behaviour than probably intended
+// * declaring a function as 'override' prevents it from accidentally being just an overload
 
 // basic overriding -----------------------------------------------------------
 class Base {
@@ -25,7 +25,7 @@ std::unique_ptr<Base> upb = std::make_unique<Derived>();
 upb->doWork();          // derived class function is invoked
 
 
-// requiremets for overriding: ------------------------------------------------
+// requirements for overriding: ------------------------------------------------
 // * The base class function must be virtual.
 // * The base and derived function names must be identical (except in the case of destructors).
 // * The parameter types of the base and derived functions must be identical.
@@ -52,20 +52,20 @@ class Derived: public Base {
 public:
 virtual void mf1();                 // not const
 virtual void mf2(unsigned int x);   // unsigned
-virtual void mf3() &&;              // differen reference qualifier
+virtual void mf3() &&;              // different reference qualifier
 void mf4() const;                   // mf4() is not declared virtual in Base
 };
 
 // some compilers may provide warnings, but not all of them
 
 
-// preven accidental overload instead of override -----------------------------
-// 'overide' is a way to make explicit that a derived class function supposed to override a base class version.
+// prevent accidental overload instead of override -----------------------------
+// 'override' is a way to make explicit that a derived class function supposed to override a base class version.
 class Derived: public Base {
 public:
 virtual void mf1() override;       // will not compile, because its only an overload, not an override
 };
-// this is especially usefull if you later change a function declaration in the base class
+// this is especially useful if you later change a function declaration in the base class
 
 // 'override' is a contextual keyword in C++11. But only if it is used at the end of a member function declaration.
 class Warning {
@@ -73,13 +73,3 @@ public:
 ...
 void override();        // legal
 };
-
-
-
-
-
-
-
-
-
-
