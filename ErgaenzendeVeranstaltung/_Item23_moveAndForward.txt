@@ -1,0 +1,12 @@
+// ITEM 23		Understand std::move and std::forward
+// ////////////////////////////////////////////////////////////////////////////
+
+// summary -------------------------------------------------------------------
+// * std::move doesn't move anything, std::forward doesn't forward anything
+// * better name for std::move might be std::rvalue_cast
+// * std::move casts its argument to an rvalue without condition
+// * std::forward casts its argument to an rvalue only if a particular condition is fulfilled
+
+
+
+

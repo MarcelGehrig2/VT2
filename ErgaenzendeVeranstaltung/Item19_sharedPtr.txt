@@ -43,7 +43,7 @@ auto customDeleter2 = [](A* object) {
 // assign deleter to unique_ptr
 auto ptr = new A( name );
 std::shared_ptr<A> ptrName1(ptr, customDeleter);
-std::shared_ptr<A> ptrName2(ptr, customDeleter2);	// same type of std::unique_ptr, but different deleter
+std::shared_ptr<A> ptrName2(ptr, customDeleter2);	// same type of std::shared_ptr, but different deleter
 std::vector<std::shared_ptr<A>> vpw{ ptrName1, ptrName2 };	// possible because same type
 // std::unique_ptr<A, decltype(customDeleter)> ptrName(ptr, customDeleter);	// type of std::unique_ptr
 

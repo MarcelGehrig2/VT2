@@ -10,7 +10,8 @@
 // * upon destruction, a non-null std::unique_ptr destroys its resource (object which it points to)
 // * a custom deleter can be used to destroy its resource
 // * the size of the std::unique_ptr grows if a custom deleter is used. If a lamda function with no captures is used as custom deleter the size of the std::unique_ptr does not grow
-// * 'std::make_unique' can be used to create an unique_ptr and an object at the same time
+// * std::make_unique can be used to create an unique_ptr and an object at the same time
+// * std::make_unique is only available since C++14
 // * std::unique_ptr come in two basic forms:
 //		- individual objects:	std::unique_ptr<T>
 //		- arrays:				std::unique_ptr<T[]>
@@ -32,8 +33,7 @@ auto customDeleter = [](A* object) {
 };
 
 // assign deleter to unique_ptr
-auto ptr = new A( name );
-std::unique_ptr<A, decltype(customDeleter)> ptrName(ptr, customDeleter);
+std::unique_ptr<A, decltype(customDeleter)> ptrName(new A( name ), customDeleter);
 
 
 // possible use cases ---------------------------------------------------------

@@ -13,3 +13,15 @@
 [submodule "Software/simpleROSNodeVt2"]
 	path = Software/simpleROSNodeVt2
 	url = https://github.com/MarcelGehrig2/simpleROSNodeVt2.git
+[submodule "Software/ros-eeros"]
+	path = Software/ros-eeros
+	url = https://github.com/MarcelGehrig2/ros-eeros.git
+[submodule "Software/sim-eeros"]
+	path = Software/sim-eeros
+	url = https://github.com/eeros-project/sim-eeros.git
+[submodule "Software/comedi-eeros"]
+	path = Software/comedi-eeros
+	url = https://github.com/eeros-project/comedi-eeros.git
+[submodule "Software/flink-eeros"]
+	path = Software/flink-eeros
+	url = https://github.com/eeros-project/flink-eeros.git
