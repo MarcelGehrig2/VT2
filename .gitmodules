@@ -4,9 +4,6 @@
 [submodule "Software/eeros-framework"]
 	path = Software/eeros-framework
 	url = https://github.com/MarcelGehrig/eeros-framework
-[submodule "Software/testAppVt2"]
-	path = Software/testAppVt2
-	url = https://github.com/MarcelGehrig2/testAppVt2.git
 [submodule "Bericht"]
 	path = Bericht
 	url = https://github.com/MarcelGehrig2/berichtVt2.git
