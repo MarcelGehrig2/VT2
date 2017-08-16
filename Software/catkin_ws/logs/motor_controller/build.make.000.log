@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target motor_controller_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/motor_controller_node.dir/motor_controller.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/lib/motor_controller/motor_controller_node[0m
-[100%] Built target motor_controller_node

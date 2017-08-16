@@ -7,6 +7,12 @@
 #IncludeRegexTransform: 
 
 /home/mgehrig2/VT2/Software/catkin_ws/src/gazebo_ros_joint_force/include/gazebo_ros_joint_force/gazebo_ros_joint_force.h
+memory
+-
+vector
+-
+algorithm
+-
 unistd.h
 -
 ros/ros.h
@@ -20,6 +26,8 @@ gazebo/gazebo.hh
 gazebo/physics/physics.hh
 -
 boost/bind.hpp
+-
+boost/algorithm/string.hpp
 -
 
 /home/mgehrig2/VT2/Software/catkin_ws/src/gazebo_ros_joint_force/src/gazebo_ros_joint_force.cpp
