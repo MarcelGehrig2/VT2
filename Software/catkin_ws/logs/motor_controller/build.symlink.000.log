@@ -1,0 +1,4 @@
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/pkgconfig/motor_controller.pc
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/motor_controller/motor_controller_node
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_controller/cmake/motor_controllerConfig.cmake
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_controller/cmake/motor_controllerConfig-version.cmake

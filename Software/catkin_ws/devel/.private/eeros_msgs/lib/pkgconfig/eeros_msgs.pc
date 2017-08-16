@@ -1,0 +1,8 @@
+prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/eeros_msgs
+
+Name: eeros_msgs
+Description: Description of eeros_msgs
+Version: 0.0.0
+Cflags: -I/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/eeros_msgs/include
+Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/eeros_msgs/lib 
+Requires: message_runtime

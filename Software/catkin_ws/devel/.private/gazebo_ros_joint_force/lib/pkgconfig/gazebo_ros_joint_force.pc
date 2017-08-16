@@ -1,0 +1,8 @@
+prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/gazebo_ros_joint_force
+
+Name: gazebo_ros_joint_force
+Description: Description of gazebo_ros_joint_force
+Version: 0.0.1
+Cflags: -I/home/mgehrig2/VT2/Software/catkin_ws/src/gazebo_ros_joint_force/include
+Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/gazebo_ros_joint_force/lib 
+Requires: 

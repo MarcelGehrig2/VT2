@@ -1,0 +1,1 @@
+/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/catkin_tools_prebuild/setup.zsh

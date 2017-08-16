@@ -1,0 +1,8 @@
+prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo_plugins
+
+Name: motor_gazebo_plugins
+Description: Description of motor_gazebo_plugins
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo_plugins/lib 
+Requires: 

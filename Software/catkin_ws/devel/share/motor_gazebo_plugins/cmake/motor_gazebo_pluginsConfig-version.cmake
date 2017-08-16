@@ -1,0 +1,1 @@
+/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo_plugins/share/motor_gazebo_plugins/cmake/motor_gazebo_pluginsConfig-version.cmake

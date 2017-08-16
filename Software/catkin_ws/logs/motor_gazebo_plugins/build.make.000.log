@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target gazebo_ros_motor[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/gazebo_ros_motor.dir/gazebo_ros_motor.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo_plugins/lib/libgazebo_ros_motor.so[0m
+[100%] Built target gazebo_ros_motor

@@ -1,0 +1,4 @@
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/libgazebo_ros_motor.so
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/pkgconfig/motor_gazebo_plugins.pc
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_gazebo_plugins/cmake/motor_gazebo_pluginsConfig.cmake
+Symlinking /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_gazebo_plugins/cmake/motor_gazebo_pluginsConfig-version.cmake

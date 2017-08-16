@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/setup.sh

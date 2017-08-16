@@ -1,0 +1,8 @@
+prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_description
+
+Name: motor_description
+Description: Description of motor_description
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_description/lib 
+Requires: 
