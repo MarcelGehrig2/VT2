@@ -1,1 +1,0 @@
-/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_rqt/share/motor_rqt/cmake/motor_rqtConfig.cmake

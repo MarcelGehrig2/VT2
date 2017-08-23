@@ -1,5 +1,0 @@
-motor_sim/motor_controller
-/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/lib/pkgconfig/motor_controller.pc /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/pkgconfig/motor_controller.pc
-/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/lib/motor_controller/motor_controller_node /home/mgehrig2/VT2/Software/catkin_ws/devel/lib/motor_controller/motor_controller_node
-/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/share/motor_controller/cmake/motor_controllerConfig.cmake /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_controller/cmake/motor_controllerConfig.cmake
-/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_controller/share/motor_controller/cmake/motor_controllerConfig-version.cmake /home/mgehrig2/VT2/Software/catkin_ws/devel/share/motor_controller/cmake/motor_controllerConfig-version.cmake

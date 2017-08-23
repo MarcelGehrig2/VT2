@@ -35,37 +35,41 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found gtest sources under '/usr/src/gtest': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.6
-[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package):
-  Could not find a package configuration file provided by "gazebo_dev" with
-  any of the following names:
-
-    gazebo_devConfig.cmake
-    gazebo_dev-config.cmake
-
-  Add the installation prefix of "gazebo_dev" to CMAKE_PREFIX_PATH or set
-  "gazebo_dev_DIR" to a directory containing one of the above files.  If
-  "gazebo_dev" provides a separate development package or SDK, be sure it has
-  been installed.
-[36mCall Stack (most recent call first):[0m
-  CMakeLists.txt:11 (find_package)
-
-
-[36m--[0m Could not find the required component 'gazebo_dev'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
-[31m[1mCMake Error[0m at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
-  Could not find a package configuration file provided by "gazebo_dev" with
-  any of the following names:
-
-    gazebo_devConfig.cmake
-    gazebo_dev-config.cmake
-
-  Add the installation prefix of "gazebo_dev" to CMAKE_PREFIX_PATH or set
-  "gazebo_dev_DIR" to a directory containing one of the above files.  If
-  "gazebo_dev" provides a separate development package or SDK, be sure it has
-  been installed.
-[36mCall Stack (most recent call first):[0m
-  CMakeLists.txt:11 (find_package)
-
-
-[36m--[0m Configuring incomplete, errors occurred!
-See also "/home/mgehrig2/VT2/Software/catkin_ws/build/gazebo_ros_joint_force/CMakeFiles/CMakeOutput.log".
-See also "/home/mgehrig2/VT2/Software/catkin_ws/build/gazebo_ros_joint_force/CMakeFiles/CMakeError.log".
+[36m--[0m Boost version: 1.58.0
+[36m--[0m Found the following Boost libraries:
+[36m--[0m   thread
+[36m--[0m   signals
+[36m--[0m   system
+[36m--[0m   filesystem
+[36m--[0m   program_options
+[36m--[0m   regex
+[36m--[0m   iostreams
+[36m--[0m   date_time
+[36m--[0m   chrono
+[36m--[0m   atomic
+[36m--[0m Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+[36m--[0m Boost version: 1.58.0
+[36m--[0m Looking for OGRE...
+[36m--[0m OGRE_PREFIX_WATCH changed.
+[36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
+[36m--[0m Checking for module 'OGRE'
+[36m--[0m   Found OGRE, version 1.9.0
+[36m--[0m Found Ogre Ghadamon (1.9.0)
+[36m--[0m Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[36m--[0m Looking for OGRE_Paging...
+[36m--[0m Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[36m--[0m Looking for OGRE_Terrain...
+[36m--[0m Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[36m--[0m Looking for OGRE_Property...
+[36m--[0m Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[36m--[0m Looking for OGRE_RTShaderSystem...
+[36m--[0m Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[36m--[0m Looking for OGRE_Volume...
+[36m--[0m Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[36m--[0m Looking for OGRE_Overlay...
+[36m--[0m Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[36m--[0m Gazebo version: 7.0
+[36m--[0m Boost version: 1.58.0
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/mgehrig2/VT2/Software/catkin_ws/build/gazebo_ros_joint_force

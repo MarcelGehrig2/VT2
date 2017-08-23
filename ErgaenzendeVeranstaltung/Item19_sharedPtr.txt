@@ -8,10 +8,10 @@
 // * memory for the reference count must be dynamically allocated
 // * increments and decrements of the reference count must be atomic ( --> slower )
 // * custom deleter can be used
-// * std::shared_ptr object are two pointers in size, but the control blocks ar larger
+// * std::shared_ptr object are two pointers in size, but the control blocks are larger
 // * if the same raw pointer is passed multiple times to the constructor of std::shared_ptr, undefined behaviour occurs
 // * dereferencing a std::shared_ptr is no more expensive than dereferencing a raw pointer
-// * std::shared_ptrs don't with arrays, std::unique_ptr do
+// * std::shared_ptrs can't be used with arrays, std::unique_ptr do
 
 
 // memory ---------------------------------------------------------------------
@@ -24,7 +24,6 @@
 //		- std::make_shared is used
 //		- ownership of a std::unique_ptr is moved to a std::shared_ptr
 //		- std::shared_ptr is called with a raw pointer. Multiple control blocks can be created with a single raw pointer --> undefined behaviour
-// * 
 
 
 // custom deleter -------------------------------------------------------------
@@ -41,11 +40,12 @@ auto customDeleter2 = [](A* object) {
 };
 
 // assign deleter to unique_ptr
-auto ptr = new A( name );
-std::shared_ptr<A> ptrName1(ptr, customDeleter);
-std::shared_ptr<A> ptrName2(ptr, customDeleter2);	// same type of std::shared_ptr, but different deleter
+auto ptr1 = new A( name );	// raw pointer
+auto ptr2 = new A( name );
+std::shared_ptr<A> ptrName1(ptr1, customDeleter);
+std::shared_ptr<A> ptrName2(ptr2, customDeleter2);	// same type of std::shared_ptr, but different deleter
 std::vector<std::shared_ptr<A>> vpw{ ptrName1, ptrName2 };	// possible because same type
-// std::unique_ptr<A, decltype(customDeleter)> ptrName(ptr, customDeleter);	// type of std::unique_ptr
+// std::unique_ptr<A, decltype(customDeleter)> ptrName(ptr1, customDeleter);	// type of std::unique_ptr
 
 
 // using 'this' as constructor argument for std::shared_ptr -------------------

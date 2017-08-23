@@ -586,7 +586,7 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
 //The directory containing a CMake configuration file for gazebo_dev.
-gazebo_dev_DIR:PATH=/opt/ros/kinetic/share/gazebo_dev/cmake
+gazebo_dev_DIR:PATH=/home/mgehrig2/VT2/Software/catkin_ws/devel/share/gazebo_dev/cmake
 
 //Path to a library.
 gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so

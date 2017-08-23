@@ -1,0 +1,8 @@
+prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/gazebo_dev
+
+Name: gazebo_dev
+Description: Description of gazebo_dev
+Version: 2.5.13
+Cflags: 
+Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/gazebo_dev/lib 
+Requires: 

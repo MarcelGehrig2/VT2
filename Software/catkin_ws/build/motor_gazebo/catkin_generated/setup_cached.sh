@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/mgehrig2/VT2/Software/catkin_ws/build/motor_gazebo"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_gazebo/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/mgehrig2/VT2/Software/catkin_ws/src/motor_sim/motor_gazebo:$ROS_PACKAGE_PATH"

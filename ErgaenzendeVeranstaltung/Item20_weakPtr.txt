@@ -33,7 +33,7 @@ std::shared_ptr<A> sharedPtr3( weakPtr )	// mark temporary ownership by converti
 
 // use case: cached objects ----------------------------------------------------
 // if loading an object is expensive (i.e. long loading time by accessing a hard drive or a database) it can be useful to cache the object. The following example stores a weak_ptr every time an object is loaded. If the object was loaded in the past, it is checked if the object still exists somewhere in the program (heap). If so (reference count > 0) it returns a smart_ptr to the existing object. No expensive loading procedure is needed.
-// this solution need very little ressources, because it only stores weak_ptr and no object.
+// this solution need very little resources, because it only stores weak_ptr and no object.
 // this implementation does not delete old, unused weak_ptr in the map
 
 std::shared_ptr<const Object> fastLoadObject(ObjectID id)
@@ -50,14 +50,14 @@ std::shared_ptr<const Object> fastLoadObject(ObjectID id)
 }
 
 
-// use case: the Observer design pattern --------------------------------------
+// use case 1: the Observer design pattern --------------------------------------
 // * subjects (objects whose state may change) should notify observers, if there state changes. A subject must store a reference to all its observers to accomplish this
 // * subjects should not affect the lifetime of the observers -> no shared_ptr
 // * a weak_ptr is suitable for this task
 // * don't forget to check for dangling pointers
 
 
-// use cases: -----------------------------------------------------------------
+// use cases 2: -----------------------------------------------------------------
 // * use weak_ptr if the object can be destroyed by someone else. Weak_ptr can check, if the object is destroyed. Raw_ptr can only check, if it has been assigned an object yet. 
 
 

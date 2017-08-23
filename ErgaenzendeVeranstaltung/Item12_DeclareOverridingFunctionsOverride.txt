@@ -5,6 +5,8 @@
 // * override != overload
 // * many mistakes with overriding are syntactically valid but have a different behaviour than probably intended
 // * declaring a function as 'override' prevents it from accidentally being just an overload
+// * good design practice: always use override if you want to override a function
+//		virtual void mf1() override;
 
 // basic overriding -----------------------------------------------------------
 class Base {

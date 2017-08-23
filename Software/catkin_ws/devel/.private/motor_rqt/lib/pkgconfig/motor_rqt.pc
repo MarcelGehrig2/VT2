@@ -1,8 +1,0 @@
-prefix=/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_rqt
-
-Name: motor_rqt
-Description: Description of motor_rqt
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/mgehrig2/VT2/Software/catkin_ws/devel/.private/motor_rqt/lib 
-Requires: 
