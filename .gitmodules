@@ -22,3 +22,6 @@
 [submodule "Software/flink-eeros"]
 	path = Software/flink-eeros
 	url = https://github.com/eeros-project/flink-eeros.git
+[submodule "BerichtManuelIlg"]
+	path = BerichtManuelIlg
+	url = https://github.com/manuelilg/vt2_bericht

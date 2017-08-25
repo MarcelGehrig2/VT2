@@ -11,7 +11,7 @@
 // * std::shared_ptr object are two pointers in size, but the control blocks are larger
 // * if the same raw pointer is passed multiple times to the constructor of std::shared_ptr, undefined behaviour occurs
 // * dereferencing a std::shared_ptr is no more expensive than dereferencing a raw pointer
-// * std::shared_ptrs can't be used with arrays, std::unique_ptr do
+// * std::shared_ptrs can't be used to point to arrays, but std::unique_ptr can be used
 
 
 // memory ---------------------------------------------------------------------

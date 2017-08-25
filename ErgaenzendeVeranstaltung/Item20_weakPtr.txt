@@ -57,7 +57,9 @@ std::shared_ptr<const Object> fastLoadObject(ObjectID id)
 // * don't forget to check for dangling pointers
 
 
-// use cases 2: -----------------------------------------------------------------
+// use case 2: -----------------------------------------------------------------
 // * use weak_ptr if the object can be destroyed by someone else. Weak_ptr can check, if the object is destroyed. Raw_ptr can only check, if it has been assigned an object yet. 
 
 
+// use case 3: ----------------------------------------------------------------
+// * if circular dependencies exist, use weak_ptr instead of raw pointer

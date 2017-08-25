@@ -27,7 +27,7 @@ class Widget {
 ...
 private:
 int x{ 0 };     // fine ( {} = braces )
-int x = { 0 }   // same as 'int x{ 0 }'
+int x = { 0 }   // same as 'int x{ 0 }'. Uniform initialization, because initialising an array has the same syntax (braces)
 int x = 0;      // fine
 int x( 0 );     // ERROR ( () = parentheses )
 };
@@ -53,7 +53,7 @@ int sum3 = x + y;       // no check for 'narrowing conversions'
 
 
 // prevent 'most vexing parse' problem ----------------------------------------
-//  'most vexing parse' = everything which can be parsed as a declaration is parsed as a declaration
+//  'most vexing parse' = everything which can be parsed as a function declaration is parsed as a function declaration
 Widget w1(10);          // Widget constructor with argument 10
 Widget w2();            // most vexing parse! declares a function named w2 that returns a Widget!
                         //  No constructor is called!
@@ -71,7 +71,7 @@ public:
 };
 Widget w1(10, true);    // calls second constructor
 Widget w2(10, 5.0);     // calls third constructor
-Widget w3{10, true};    // uses braces, calls std::initializer_list constructor (10 and true convert to long double)
+Widget w3{10, true};    // WARNING: uses braces, calls std::initializer_list constructor (both 10 and true are casted to long double)
 							// if the std::initializer_list constructor would not be declared, the second constructor would be called
 Widget w4(w2);          // uses parentheses, calls copy constructor
 Widget w5{w4};          // uses braces, calls std::initializer_list constructor (w4 converts to float, and float converts to long double)

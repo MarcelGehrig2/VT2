@@ -18,6 +18,10 @@
 // * std::unique can be converted to std::shared_ptr
 
 
+// std::make_unique -----------------------------------------------------------
+auto pw = std::make_unique<Widget>();	// Widget and uinque_ptr are created at the same time
+
+
 // custom deleter -------------------------------------------------------------
 // * the standard deleter uses 'delete' on the object
 // * a custom deleter can be used with an unique_ptr

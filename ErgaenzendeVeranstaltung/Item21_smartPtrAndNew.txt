@@ -8,7 +8,7 @@
 // * the make functions are more efficient than using new and passing the pointer to the constructor of a smart pointer
 // * the make functions reduce the risk of resources leak
 // * the make functions can NOT be used, if you want to use a custom deleter -> use new and the constructor of the smart_ptr
-// * the make functions can NOT be used for a object with a std::initializer_list as argument in the constructor
+// * the make functions need a workaround to be used for a object with a std::initializer_list as argument in the constructor
 // * the make functions may be inappropriate when weak_ptr points to very large objects
 
 
@@ -47,7 +47,7 @@ auto customDeleter = [](A* object) { ... };
 std::unique_ptr<A, decltype(customDeleter)> ptrName1(new A, customDeleter);
 std::shared_ptr<A> ptrName2(new A, customDeleter);
 
-// * std::initializer_list can be used for the constructor of the object
+// * std::initializer_list can be used for the constructor of the object with this workaround:
 auto initList = { 10, 20 };
 auto spv = std::make_shared<std::vector<int>>(initList);
 
