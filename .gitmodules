@@ -25,3 +25,6 @@
 [submodule "BerichtManuelIlg"]
 	path = BerichtManuelIlg
 	url = https://github.com/manuelilg/vt2_bericht
+[submodule "Software/catkin_ws/src/gazebo_ros_joint_force"]
+	path = Software/catkin_ws/src/gazebo_ros_joint_force
+	url = https://github.com/manuelilg/gazebo_ros_joint_force
