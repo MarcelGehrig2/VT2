@@ -28,3 +28,6 @@
 [submodule "Software/catkin_ws/src/gazebo_ros_joint_force"]
 	path = Software/catkin_ws/src/gazebo_ros_joint_force
 	url = https://github.com/manuelilg/gazebo_ros_joint_force
+[submodule "Software/catkin_ws/src/gazebo_ros_pkgs"]
+	path = Software/catkin_ws/src/gazebo_ros_pkgs
+	url = https://github.com/manuelilg/gazebo_ros_pkgs
