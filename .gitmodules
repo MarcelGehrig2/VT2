@@ -31,3 +31,6 @@
 [submodule "Software/catkin_ws/src/gazebo_ros_pkgs"]
 	path = Software/catkin_ws/src/gazebo_ros_pkgs
 	url = https://github.com/manuelilg/gazebo_ros_pkgs
+[submodule "Software/catkin_ws/src/motor_sim"]
+	path = Software/catkin_ws/src/motor_sim
+	url = https://github.com/manuelilg/motor_sim
